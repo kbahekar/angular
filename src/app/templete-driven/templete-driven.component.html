@@ -1,0 +1,54 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+  <!-- Name -->
+  <label>Name:</label><br />
+  <input type="text" name="name" [(ngModel)]="formData.name" required #name="ngModel" />
+  <div *ngIf="name.touched && name.invalid" style="color:red;">
+    Name is required
+  </div>
+
+  <br />
+
+  <!-- Gender -->
+  <label>Gender:</label><br />
+  <label>
+    <input type="radio" name="gender" [(ngModel)]="formData.gender" value="male" required #gender="ngModel" />
+    Male
+  </label>
+  <label>
+    <input type="radio" name="gender" [(ngModel)]="formData.gender" value="female" />
+    Female
+  </label>
+  <div *ngIf="gender.touched && gender.invalid" style="color:red;">
+    Gender is required
+  </div>
+
+  <br />
+
+  <!-- Specialization -->
+  <label>Specialization:</label><br />
+  <select name="specialization" [(ngModel)]="formData.specialization" required #specialization="ngModel">
+    <option value="">Select...</option>
+    <option *ngFor="let spec of specializations" [value]="spec">{{ spec }}</option>
+  </select>
+  <div *ngIf="specialization.touched && specialization.invalid" style="color:red;">
+    Please select a specialization
+  </div>
+
+  <br />
+
+  <!-- Terms -->
+  <label>
+    <input type="checkbox" name="terms" [(ngModel)]="formData.terms" required #terms="ngModel" />
+    I agree to the Terms and Conditions
+  </label>
+  <div *ngIf="terms.touched && terms.invalid" style="color:red;">
+    You must accept the terms
+  </div>
+
+  <br /><br />
+
+  <!-- Submit -->
+  <button type="submit">Submit</button>
+
+</form>

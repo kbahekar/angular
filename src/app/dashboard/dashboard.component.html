@@ -1,0 +1,9 @@
+<div><div *ngIf="category$ | async as category">
+  <h2>Category Details</h2>
+  <p><strong>ID:</strong> {{ category.categoryId }}</p>
+  <p><strong>Name:</strong> {{ category.categoryName }}</p>
+</div>
+
+<!-- For Debugging -->
+<pre>{{ category$ | async | json }}</pre>
+</div>

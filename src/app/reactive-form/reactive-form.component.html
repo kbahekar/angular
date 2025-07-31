@@ -1,0 +1,56 @@
+
+
+<div style="background-color: aliceblue; display: flex; justify-self: center; align-items: center; width: 50%; height: 50%; margin-top: 30px;">
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+<div style="margin-bottom: 10px;">
+ <label>Name:</label><br />
+  <input type="text" formControlName="name" style="width: 100%;height: 100%;" />
+  <div *ngIf="registrationForm.get('name')?.touched && registrationForm.get('name')?.invalid" style="color:red;">
+    Name is required
+  </div>
+</div>
+ 
+<div style="margin-bottom: 10px;">
+ <label>Gender:</label><br />
+  <label><input type="radio" formControlName="gender" value="male" /> Male</label>
+  <label><input type="radio" formControlName="gender" value="female" /> Female</label>
+  <div *ngIf="registrationForm.get('gender')?.touched && registrationForm.get('gender')?.invalid" style="color:red;">
+    Gender is required
+  </div>
+
+</div>
+<div style="margin-bottom: 10px;">
+  <label>Specialization:</label><br />
+  <select formControlName="specialization">
+    <option value="">Select...</option>
+    <option *ngFor="let spec of specializations" [value]="spec">{{ spec }}</option>
+  </select>
+  <div *ngIf="registrationForm.get('specialization')?.touched && registrationForm.get('specialization')?.invalid" style="color:red;">
+    Specialization is required
+  </div>
+  <br />
+</div>
+
+<div style="margin-bottom: 10px;">
+    <label>
+    <input type="checkbox" formControlName="terms" />
+    I agree to the Terms and Conditions
+  </label>
+  <div *ngIf="registrationForm.get('terms')?.touched && registrationForm.get('terms')?.invalid" style="color:red;">
+    You must accept the terms
+  </div> 
+</div>
+
+
+ 
+
+ <div>
+      <button type="submit">Submit</button>
+ </div>
+
+
+</form>
+
+
+</div>

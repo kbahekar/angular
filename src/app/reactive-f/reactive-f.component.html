@@ -1,0 +1,13 @@
+
+
+
+
+<form [formGroup]="regitation" (ngSubmit)="onSubmit()">
+<input placeholder="name"  formControlName="name" />
+ <div *ngIf="regitation.get('name')?.touched && regitation.get('name')?.invalid" style="color:red;">
+    Name is required
+  </div>
+<button type="submit" >Submit</button>
+</form>
+
+

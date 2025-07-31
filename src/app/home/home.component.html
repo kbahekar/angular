@@ -1,0 +1,80 @@
+
+
+<div style="display: flex;">
+<button [routerLink]="['/template-form']">
+  Template form
+</button>
+
+<button [routerLink]="['/reactive-form']">
+ Reactive form
+</button>
+<button [routerLink]="['/todo']">
+   Todo
+</button>
+<button [routerLink]="['/conter']">
+   Conter
+</button>
+
+<button [routerLink]="['/reactiveF']">
+   ReactiveF
+</button>
+
+<button [routerLink]="['/input-output']">
+   Input - output directive 
+</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 style="text-align: center;">Ngrx</h1>
+
+<div  style="text-align: center; margin-bottom: 20px;">
+  <h2 hover>Select Category</h2>
+  <p>{{'Choose a category from the dropdown below: ' | starPipe }}</p>
+<select (change)="onSelect($event)">
+    @for (item of categories; track $index) {
+        <option [value]="item.categoryId">{{ item.categoryName }}</option>
+    }
+  
+</select>
+
+
+<div *ngIf="category$ | async as category">
+  <h2>Category Details</h2>
+  <p><strong>ID:</strong> {{ category.categoryId }}</p>
+  <p><strong>Name:</strong> {{ category.categoryName }}</p>
+</div>
+
+<!-- For Debugging -->
+<pre>{{ category$ | async | json }}</pre>
+</div>
+
+
+
+<app-dashboard></app-dashboard>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
