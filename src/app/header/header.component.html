@@ -1,0 +1,143 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-4 px-4">
+  <div class="container-fluid justify-content-between">
+    
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png" alt="Visa Home" height="30">
+    </a>
+
+    <!-- Mobile toggle button (hamburger) -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Search Icon (hidden on mobile) -->
+   
+
+    <!-- Collapsible Nav -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto">
+
+        <!-- Individuals -->
+        <li class="nav-item dropdown position-static" #individualsMenu>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Individuals</a>
+          <div class="dropdown-menu mega-menu shadow">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3"
+              (click)="closeDropdown(individualsMenu)">
+            </button>
+            <div class="container">
+              <div class="row py-4">
+                <div class="col-md">
+                  <a class="dropdown-item fw-bold" href="#">Find a Visa Card</a>
+                  <a class="dropdown-item" href="#">Visa Credit Cards</a>
+                  <a class="dropdown-item" href="#">Visa Debit Cards</a>
+                  <a class="dropdown-item" href="#">Visa Prepaid Cards</a>
+                  <a class="dropdown-item" href="#">Visa Gift Cards</a>
+                </div>
+                <div class="col-md">
+                  <h6 class="dropdown-item fw-bold">EXPERIENCE MORE</h6>
+                  <a class="dropdown-item" href="#">Experiences + Perks</a>
+                  <a class="dropdown-item" href="#">Card Benefits</a>
+                  <a class="dropdown-item" href="#">Travel with Visa</a>
+                  <a class="dropdown-item" href="#">Support Local Businesses</a>
+                  <a class="dropdown-item" href="#">ATM Services</a>
+                </div>
+                <div class="col-md">
+                  <h6 class="dropdown-item fw-bold">SMARTER TECHNOLOGY</h6>
+                  <a class="dropdown-item" href="#">Click to Pay</a>
+                  <a class="dropdown-item" href="#">Tap to Pay</a>
+                  <a class="dropdown-item" href="#">Visa Installments</a>
+                </div>
+                <div class="col-md">
+                   <div class="dropdown-item fw-bold">
+                  <h6 class="dropdown-item fw-bold">PROTECTION + SECURITY</h6>
+                  <a class="dropdown-item" href="#">Security + Fraud Prevention</a>
+                  <a class="dropdown-item" href="#">Zero Liability</a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Businesses -->
+        <li class="nav-item dropdown position-static" #businessesMenu>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Businesses</a>
+          <div class="dropdown-menu mega-menu shadow">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3"
+              (click)="closeDropdown(businessesMenu)">
+            </button>
+            <div class="container">
+              <div class="row py-4">
+                <div class="col-md">
+                  <a class="dropdown-item fw-bold" href="#">Business Credit Cards</a>
+                  <a class="dropdown-item" href="#">Business Debit Cards</a>
+                  <a class="dropdown-item" href="#">Prepaid Business Cards</a>
+                </div>
+                <div class="col-md">
+                  <h6 class="dropdown-item fw-bold">ENTERPRISE SOLUTIONS</h6>
+                  <a class="dropdown-item" href="#">Corporate Payment Solutions</a>
+                  <a class="dropdown-item" href="#">Expense Management</a>
+                  <a class="dropdown-item" href="#">B2B Payments</a>
+                </div>
+                <div class="col-md">
+                  <h6 class="dropdown-item fw-bold">INDUSTRIES</h6>
+                  <a class="dropdown-item" href="#">Retail</a>
+                  <a class="dropdown-item" href="#">Hospitality</a>
+                  <a class="dropdown-item" href="#">Healthcare</a>
+                </div>
+                <div class="col-md">
+                  <h6 class="dropdown-item fw-bold">RESOURCES</h6>
+                  <a class="dropdown-item" href="#">Case Studies</a>
+                  <a class="dropdown-item" href="#">Business Guides</a>
+                  <a class="dropdown-item" href="#">Whitepapers</a>
+                </div>
+                <div class="col-md">
+                  <h6 class="dropdown-item fw-bold">SUPPORT</h6>
+                  <a class="dropdown-item" href="#">Contact Business Support</a>
+                  <a class="dropdown-item" href="#">Partner with Visa</a>
+                  <a class="dropdown-item" href="#">Developer Center</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Innovators -->
+        <li class="nav-item dropdown position-static" #innovatorsMenu>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">
+            Innovators
+          </a>
+          <div class="dropdown-menu mega-menu shadow text-center" style="width:100%;">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3"
+              (click)="closeDropdown(innovatorsMenu)">
+            </button>
+            <div class="container">
+              <div class="row justify-content-center py-4">
+                <div class="col-md-3">
+                  <img src="https://usa.visa.com/content/dam/VCOM/regional/na/us/navigation/images/team-working-together-400x225.jpeg" class="img-fluid mb-2" alt="">
+                  <a href="#" class="text-decoration-none">Visa Fintech</a>
+                </div>
+                <div class="col-md-3">
+                  <img src="https://usa.visa.com/content/dam/VCOM/global/navigation/images/visa-developers-400x225.jpg" class="img-fluid mb-2" alt="">
+                  <a href="#" class="text-decoration-none">Visa Partner</a>
+                </div>
+                <div class="col-md-3">
+                  <img src="https://usa.visa.com/content/dam/VCOM/global/navigation/images/visa-developer-400x225.jpg" class="img-fluid mb-2" alt="">
+                  <a href="#" class="text-decoration-none">Visa Developer</a>
+                </div>
+                <div class="col-md-3">
+                  <h5>Links Global</h5>
+                  <p>Innovation Centers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+     <a class="nav-link d-none d-lg-block"><i class="bi bi-search"></i></a>
+  </div>
+</nav>

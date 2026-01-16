@@ -10,6 +10,7 @@ import { TempleteDrivenComponent } from './templete-driven/templete-driven.compo
 import { ReactiveFComponent } from './reactive-f/reactive-f.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { ChildComponent } from './child/child.component';
+import { MainContaintComponent } from './main-containt/main-containt.component';
 
 export const routes: Routes = [
 
@@ -53,5 +54,10 @@ export const routes: Routes = [
     {
         path:'child',
         component:ChildComponent
+    },
+    {
+        path:'visa',
+        component:MainContaintComponent
     }
+
 ];

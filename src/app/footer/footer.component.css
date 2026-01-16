@@ -1,0 +1,71 @@
+.footer-section {
+  background-color: #f8f9fa;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0.2px; /* subtle spacing like Visa */
+}
+
+.footer-heading {
+  font-weight: 400; /* not too bold */
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+}
+
+.footer-link {
+  display: block;
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 0.45rem;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  line-height: 1.6; /* better readability */
+}
+
+.footer-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer-divider {
+  margin: 2rem 0;
+}
+
+.footer-select {
+  max-width: 280px;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.75rem;
+}
+
+.footer-icon {
+  color: #6c757d;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  transition: color 0.2s ease-in-out;
+  vertical-align: middle;
+}
+
+.footer-icon:hover {
+  color: #000;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #6c757d;
+  text-align: right;
+}
+
+/* Align center properly on small devices */
+@media (max-width: 767px) {
+  .footer-copy {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Force vertical centering in bottom row */
+.footer-section .row.align-items-center {
+  display: flex;
+  align-items: center;
+}

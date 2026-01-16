@@ -1,0 +1,112 @@
+ 
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-buttons .btn {
+      margin: 0.5rem 0;
+    }
+    .navbar-nav .nav-link {
+      margin-right: 1rem;
+    }
+
+    /* Show dropdown on hover (desktop only) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+
+
+  
+/* Make dropdown span full width and center below */
+
+/* Full-width mega menu, center content */
+.position-static .dropdown-menu.mega-menu {
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 2px solid #eee;
+}
+
+.mega-menu .container {
+  max-width: 1200px; /* Optional: control content width */
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Remove dropdown arrow */
+  .nav-link.dropdown-toggle::after {
+    display: none !important;
+  }
+
+  /* Background color change on hover */
+  .nav-link {
+    transition: background-color 0.3s ease;
+  }
+  .nav-link:hover {
+    background-color: #f0f0f0; /* Change to your desired color */
+  }
+
+
+ /* Remove dropdown arrow */
+  .nav-link.dropdown-toggle::after {
+    display: none !important;
+  }
+
+  /* Background color change on hover for menu title */
+  .nav-link {
+    transition: background-color 0.3s ease;
+  }
+  .nav-link:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Remove underline for inner links */
+  .dropdown-menu a {
+    text-decoration: none;
+    color: inherit; /* keep default text color */
+  }
+  .dropdown-menu a:hover {
+    text-decoration: underline; /* optional: underline on hover */
+  }
+
+  .mega-menu {
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+a.text-decoration-none {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.text-decoration-none:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-close {
+  z-index: 10;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+

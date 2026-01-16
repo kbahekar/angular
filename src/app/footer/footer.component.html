@@ -1,0 +1,38 @@
+<footer class="footer-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Columns -->
+      <div class="col-6 col-md-2 mb-4" *ngFor="let section of footerLinks">
+        <h6 class="footer-heading">{{ section.title }}</h6>
+        <ul class="list-unstyled">
+          <li *ngFor="let link of section.links">
+            <a [href]="link.url" class="footer-link">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <!-- Bottom row -->
+    <div class="row align-items-center">
+      <div class="col-md-4 mb-3 mb-md-0">
+        <select class="form-select footer-select">
+          <option selected>Select country/region</option>
+          <option *ngFor="let country of countries">{{ country }}</option>
+        </select>
+      </div>
+
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <a href="#" class="footer-icon"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="footer-icon"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="footer-icon"><i class="bi bi-instagram"></i></a>
+      </div>
+
+      <div class="col-md-4 text-md-end">
+        <small class="footer-copy">© 1996 - 2025. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>

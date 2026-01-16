@@ -1,0 +1,127 @@
+<app-header></app-header>
+<!-- navbar.component.html -->
+<div class="full-screen-bg">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-auto pt-5 text-center">
+      <div class="toggle-container">
+  <div 
+    class="toggle-pill" 
+    [class.right]="selectedOption === 'Businesses'">
+  </div>
+
+  <div 
+    class="toggle-option" 
+    (click)="toggle('Individuals')">
+    Individuals
+  </div>
+
+  <div 
+    class="toggle-option" 
+    (click)="toggle('Businesses')">
+    Businesses
+  </div>
+</div>
+
+    </div>
+<!-- Bootstrap CSS -->
+
+@if (selectedOption=='Individuals') {
+<section class="hero text-white py-5">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Left: Centered Heading -->
+      <div class="col-lg-6 d-flex align-items-center">
+        <h1 class="fw-bold display-3 mb-0">
+          The easiest way<br>to pay
+        </h1>
+      </div>
+
+      <!-- Right: Buttons at Top -->
+<div class="col-lg-6 hero-slider-container">
+  <div class="hero-slider">
+    <a href="#" class="btn btn-warning rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Get support <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Find a card <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Explore card benefits <span class="ms-2 text-primary">→</span>
+    </a>
+
+    <!-- Duplicate items for seamless looping -->
+    <a href="#" class="btn btn-warning rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Get support <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Find a card <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Explore card benefits <span class="ms-2 text-primary">→</span>
+    </a>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+}
+@if (selectedOption=='Businesses') {
+ <section class="hero text-white">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Left: Heading (Vertically Centered) -->
+      <div class="col-lg-6 d-flex align-items-center">
+        <h1 class="fw-bold display-3 mb-0">
+            Your business. <br> Your move.
+        </h1>
+      </div>
+
+      <!-- Right: Floating Buttons (Top Aligned) -->
+      <div class="col-lg-6 hero-buttons-container">
+  <div class="hero-buttons">
+    <a href="#" class="btn btn-warning-b rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Explore enterprise risk solutions <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning-b rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Ways to move money globally <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning-b rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Visa brand mark guidelines <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning-b rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Ways to move money globally <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning-b rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Ways to move money globally <span class="ms-2 text-primary">→</span>
+    </a>
+    <a href="#" class="btn btn-warning-b rounded-pill px-4 py-4 d-inline-flex align-items-center">
+      Ways to move money globally <span class="ms-2 text-primary">→</span>
+    </a>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+}
+
+  
+
+
+</div>
+</div>
+</div>
+
+
+<app-footer></app-footer>

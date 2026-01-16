@@ -1,0 +1,165 @@
+/* navbar.component.css */
+.full-screen-bg {
+  background-image: url('https://usa.visa.com/content/dam/VCOM/regional/na/us/homepage/images/tap-to-pay-woman-background-1920x1600.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+  width: 100vw;  
+  position: relative; /* Fixed position to stay in place during scrolling */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure it stays behind other content */
+}
+
+
+.toggle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  border: 2px solid gray;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.toggle-pill {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #154EC1; /* Blue highlight */
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.toggle-pill.right {
+  transform: translateX(100%);
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  z-index: 2;
+  color: gray;
+  line-height: 50px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.toggle-option:first-child {
+  border-radius: 50px 0 0 50px;
+}
+
+.toggle-option:last-child {
+  border-radius: 0 50px 50px 0;
+}
+
+.toggle-container .toggle-option:nth-child(2),
+.toggle-container .toggle-option:nth-child(3) {
+  position: relative;
+}
+
+.toggle-option:nth-child(2) {
+  color: white; /* Default for Individuals */
+}
+
+.toggle-pill.right ~ .toggle-option:nth-child(2) {
+  color: gray;
+}
+
+.toggle-pill.right ~ .toggle-option:nth-child(3) {
+  color: white;
+}
+
+.hero {
+  background: url('/assets/your-image.jpg') center/cover no-repeat;
+  height: 100vh;
+}
+
+.btn-warning {
+  background-color: #ffeb99;
+  border: none;
+}
+
+/* .btn-warning:hover {
+  background-color: #ffe066;
+} */
+.btn-warning-b {
+  background-color: #c7edff;
+  border: none;
+}
+
+/* .btn-warning-b:hover {
+  background-color: #ffe066;
+} */
+
+
+
+
+/* Make buttons float more like the screenshot */
+.hero-buttons {
+  position: relative;
+  top: 50px;
+}
+
+
+
+.hero-buttons-container {
+  height: 100%; /* Show only part of the list */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 10s linear infinite;
+}
+
+.hero-buttons a {
+  margin-bottom: 1rem;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%); /* Adjust based on content height */
+  }
+}
+.hero-slider-container {
+  height: 100%; /* adjust based on how many buttons you want visible */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-slider {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 8s linear infinite;
+}
+
+.hero-slider a {
+  margin-bottom: 1rem;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Pause on hover */
+.hero-slider-container:hover .hero-slider {
+  animation-play-state: paused;
+}
+
